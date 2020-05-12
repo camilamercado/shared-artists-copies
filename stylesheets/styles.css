@@ -68,18 +68,20 @@ section#artists ul li {
   text-align: center;
   font-size: 22px;
 }
+section#mailing-list {
+  font-size: 22px;
+}
 section#mailing-list #mailing-box {
   display: block;
   width: 250px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.61);
-  margin: auto;
   text-align: center;
   line-height: 30px;
   color: rgb(61, 61, 61);
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
   body {
     display: block;
   }
@@ -109,7 +111,8 @@ section#mailing-list #mailing-box {
     padding-right: 0px;
     align-items: start;
   }
-  section#artists ul li {
+  section#artists ul li,
+  section#mailing-list {
     font-size: 16px;
   }
 }
