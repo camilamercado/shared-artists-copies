@@ -41,22 +41,42 @@ section h2 {
 
 section#images figure {
   width: 100%;
+  margin: 0;
 }
 
 section#images figure img {
   width: 100%;
   filter: saturate(0);
 }
-
+section#about,
+section#artists,
+section#mailing-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 300px;
+}
 section#about {
   width: 90%;
+  padding-right: 0;
 }
 section#artists ul {
   padding: 0;
 }
-
 section#artists ul li {
   list-style-type: none;
+  text-align: center;
+  font-size: 22px;
+}
+section#mailing-list #mailing-box {
+  display: block;
+  width: 250px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.61);
+  margin: auto;
+  text-align: center;
+  line-height: 30px;
+  color: rgb(61, 61, 61);
 }
 
 @media only screen and (max-width: 600px) {
@@ -81,5 +101,14 @@ section#artists ul li {
   }
   section#about{
     width: 100%;
+  }
+  section#about,
+  section#artists,
+  section#mailing-list {
+    padding-right: 0px;
+    align-items: start;
+  }
+  section#artists ul li {
+    font-size: 16px;
   }
 }
