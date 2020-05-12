@@ -95,6 +95,7 @@ section#mailing-list #mailing-box {
   }
   section {
     padding-top: 160px;
+    min-height: calc(100vh - 160px);
   }
   section#images figure {
     margin: 0;
