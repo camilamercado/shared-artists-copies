@@ -85,12 +85,12 @@ section#mailing-list #mailing-box {
     bottom: 0px;
   } */
 
-  /* section#mailing-list .content-area {
+  section#mailing-list .content-area {
     position: relative;
     width: 300px;
-    bottom: 45vh;
-    left: -150px;
-  } */
+    left: 0;
+    margin-left: 0;
+  }
   
   section#mailing-list .content-area p:nth-child(2){
     float: unset;
