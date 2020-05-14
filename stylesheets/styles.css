@@ -1,37 +1,12 @@
 body {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  padding: 10px;
+  margin: 0px;
 }
 
 body * {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-nav {
-  grid-column: 1 / span 1;
-  position: fixed;
-}
-
-nav h1 {
-  font-size: 22px;
-  margin-top: 0;
-}
-
-nav a {
-  display: block;
-  color: black;
-  font-size: 22px;
-  /* text-transform: uppercase; */
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: blue;
-}
-
 section {
-  grid-column: 2 / span 1;
   min-height: 100vh;
 }
 
@@ -40,79 +15,96 @@ section h2 {
 }
 
 section#images figure {
-  width: 100%;
   margin: 0;
+  margin-top: -10px;
 }
 
 section#images figure img {
-  width: 100%;
+  max-width: 150vw;
   filter: saturate(0);
 }
-section#about,
-section#artists,
+
 section#mailing-list {
+  position: relative;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 300px;
-}
-section#about {
-  width: 90%;
-  padding-right: 0;
-}
-section#artists ul {
-  padding: 0;
-}
-section#artists ul li {
-  list-style-type: none;
-  text-align: center;
   font-size: 22px;
+  z-index: -1;
 }
-section#mailing-list {
-  font-size: 22px;
+
+section#mailing-list .content-area {
+  position: fixed;
+  width: 420px;
+  bottom: 45vh;
+  left: -210px;
+  margin-left: 50%;
 }
+
+section#mailing-list .content-area p:nth-child(2){
+  margin: 0;
+  float: left;
+}
+
+section#mailing-list .content-area p:nth-child(4){
+  font-size: 16px;
+  margin-top: 60px;
+  margin-left: 150px;
+  font-style: italic;
+  color: rgba(0, 0, 0, 0.527);
+}
+
 section#mailing-list #mailing-box {
-  display: block;
+  display: inline-block;
+  float: left;
   width: 250px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.61);
   text-align: center;
   line-height: 30px;
   color: rgb(61, 61, 61);
+  margin-top: -5px;
+  margin-left: 10px;
 }
 
 @media only screen and (max-width: 750px) {
   body {
-    display: block;
+    /* margin-bottom: 100vh; */
   }
-  nav {
-    top: 0px;
-    padding: 20px 0;
-    z-index: 2;
-    background: white;
-    width: 100%;
-  }
-  nav a {
-    font-size: 18px;
-  }
+
   section {
-    padding-top: 160px;
     min-height: calc(100vh - 160px);
   }
-  section#images figure {
-    margin: 0;
-  }
-  section#about{
-    width: 100%;
-  }
-  section#about,
-  section#artists,
-  section#mailing-list {
-    padding-right: 0px;
-    align-items: start;
-  }
-  section#artists ul li,
-  section#mailing-list {
+
+  /* section#mailing-list {
     font-size: 16px;
+    height: 100vh;
+    background: lightblue;
+    position: fixed;
+    bottom: 0px;
+  } */
+
+  /* section#mailing-list .content-area {
+    position: relative;
+    width: 300px;
+    bottom: 45vh;
+    left: -150px;
+  } */
+  
+  section#mailing-list .content-area p:nth-child(2){
+    float: unset;
+    margin: 1em 0;
+  }
+  
+  section#mailing-list .content-area p:nth-child(4){
+    float: unset;
+    margin-left: unset;
+    margin-top: unset;
+  }
+  
+  section#mailing-list #mailing-box {
+    float: unset;
+    margin: unset;
   }
 }
