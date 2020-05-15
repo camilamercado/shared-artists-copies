@@ -1,29 +1,25 @@
 body {
   margin: 0px;
+  margin-bottom: 350vh;
 }
-
 body * {
   font-family: Arial, Helvetica, sans-serif;
 }
-
 section {
   min-height: 100vh;
 }
-
-section h2 {
-  font-size: 16px;
+section#images {
+  position: absolute;
+  z-index: 2;
 }
-
 section#images figure {
   margin: 0;
   margin-top: -10px;
 }
-
 section#images figure img {
   max-width: 150vw;
   filter: saturate(0);
 }
-
 section#mailing-list {
   position: relative;
   width: 100%;
@@ -31,50 +27,69 @@ section#mailing-list {
   align-items: center;
   justify-content: center;
   font-size: 22px;
-  z-index: -1;
+  z-index: 0;
 }
-
 section#mailing-list .content-area {
   position: fixed;
-  width: 420px;
+  width: 520px;
   bottom: 45vh;
-  left: -210px;
+  left: -260px;
   margin-left: 50%;
 }
-
-section#mailing-list .content-area p:nth-child(2){
-  margin: 0;
+section#mailing-list .content-area h2,
+section#mailing-list .content-area p {
+  font-size: 28px;
+}
+section#mailing-list .content-area h2{
   float: left;
 }
-
-section#mailing-list .content-area p:nth-child(4){
-  font-size: 16px;
-  margin-top: 60px;
-  margin-left: 150px;
-  font-style: italic;
-  color: rgba(0, 0, 0, 0.527);
-}
-
-section#mailing-list #mailing-box {
+section#mailing-list .content-area .mc-field-group {
   display: inline-block;
+}
+section#mailing-list .content-area .mc-field-group * {
   float: left;
-  width: 250px;
-  height: 30px;
+  position: relative;
+  font-size: 28px;
+}
+section#mailing-list .content-area .mc-field-group label{
+  margin-top: 0.25em;
+  margin-right: 0.5em;
+}
+section#mailing-list .content-area .mc-field-group input{
+  width: 280px;
+  /* height: 10px; */
+  padding: 10px;
+  font-size: 20px;
+  color: grey;
   border: 1px solid rgba(0, 0, 0, 0.61);
-  text-align: center;
-  line-height: 30px;
-  color: rgb(61, 61, 61);
-  margin-top: -5px;
-  margin-left: 10px;
+}
+section#mailing-list .content-area input.button{
+  font-size: 24px;
+  border: 1px solid #5a5a5a;
+  border-radius: 5px;
+  margin-top: 14px;
+  padding: 5px 10px;
+  color: #5a5a5a;
+}
+section#mailing-list .content-area input.button:hover{
+  border: 1px solid black;
+  color: black;
 }
 
 @media only screen and (max-width: 750px) {
-  
+  body {
+    margin-bottom: 150vh;
+  }
   section {
     min-height: calc(100vh - 160px);
   }
-
-  section#mailing-list {
+  section#mailing-list .content-area {
+    width: calc(100vw - 20px);
+    margin-left: 0;
+    left: 0;
+    padding: 10px;
+  }
+  /* section#mailing-list {
     align-content: center;
   }
 
@@ -100,5 +115,5 @@ section#mailing-list #mailing-box {
   section#mailing-list #mailing-box {
     float: unset;
     margin: unset;
-  }
+  } */
 }
