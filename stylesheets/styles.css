@@ -75,7 +75,7 @@ section#mailing-list .content-area input.button:hover{
   border: 1px solid black;
   color: black;
 }
-section#mailing-list .content-area #mc_embed_signup div.mce_inline_error {
+section#mailing-list .content-area#mc_embed_signup div.mce_inline_error {
   margin: 0 0 1em 0;
   padding: 0;
   background-color: transparent;
